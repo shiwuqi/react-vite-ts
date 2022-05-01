@@ -98,7 +98,30 @@ module.exports = {
                 'format': ['PascalCase'],
             },
         ],
+
         'no-underscore-dangle': 'off',
         'jsx-quotes': ['error', 'prefer-double'],
+
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': ['error', {
+            'allowShortCircuit': true,
+            'allowTernary': true,
+            'allowTaggedTemplates': true,
+        }],
+
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', {
+            'argsIgnorePattern': '^_'
+        }],
+
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['warn', {
+            'functions': true,
+            'classes': true,
+            'variables': true,
+        }],
+
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'error'
     }
 }
