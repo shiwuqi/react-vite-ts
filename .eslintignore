@@ -1,0 +1,11 @@
+**/*.md
+**/*.svg
+**/*.ejs
+**/*.html
+**/*.less
+
+package.json
+jsconfig.json
+tsconfig.json
+dist
+.eslintrc.js
