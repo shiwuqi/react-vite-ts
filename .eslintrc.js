@@ -36,7 +36,6 @@ module.exports = {
 
     ],
     extends: [
-        'airbnb-typescript',
         'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
@@ -80,7 +79,9 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'warn',
 
         'brace-style': 'off',
-        '@typescript-eslint/brace-style': baseRules['brace-style'],
+        '@typescript-eslint/brace-style': ['error', '1tbs', {
+            'allowSingleLine': true
+        }],
 
         'camelcase': 'off',
         '@typescript-eslint/naming-convention': [

@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "prepare": "husky install"
+    "build": "tsc && vite build"
   },
   "author": " <liziw2012@163.com>",
   "license": "ISC",
@@ -22,11 +21,15 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^4.20.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
     "@types/node": "^17.0.30",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
@@ -37,7 +40,9 @@
     "autoprefixer": "^10.4.5",
     "eslint": "7.32.0",
     "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "^4.3.8",
+    "less": "^4.1.2",
     "lint-staged": "^12.4.1",
     "postcss": "^8.4.13",
     "prettier": "^2.6.2",
