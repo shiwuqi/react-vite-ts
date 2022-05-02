@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: build
-  image: react_vite_ts:dev
+  image: indexed/react_vite_ts:dev
   commands:
   - npm i
   - npm run build
