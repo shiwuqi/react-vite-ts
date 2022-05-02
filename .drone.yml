@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: build
-  image: node:18-alpine
+  image: node:lts-slim
   commands:
   - npm i
   - npm run build
