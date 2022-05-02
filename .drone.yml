@@ -3,6 +3,7 @@ name: default
 
 steps:
 - name: build
+  image: alpine
   commands:
   - npm i
   - npm run build
