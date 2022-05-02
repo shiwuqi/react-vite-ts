@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: build
-  image: http://94.191.122.96/dev/react_vite_ts:lts-alpine
+  image: http://94.191.122.96/dev/react_vite_ts:dev
   commands:
   - npm i pnpm -g
   - pnpm i
