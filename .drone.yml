@@ -7,5 +7,5 @@ steps:
   commands:
   - npm config set registry https://registry.npm.taobao.org
   - npm i pnpm -g
-  - npm i
-  - npm run build
+  - pnpm i
+  - pnpm run build
