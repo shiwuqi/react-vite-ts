@@ -3,21 +3,7 @@ name: default
 
 steps:
 - name: build
-  image: node:lts-slim
+  image: node:18-alpine3.14
   commands:
   - npm i
   - npm run build
-
-- name: push-harbor
-  image: plugins/docker
-  settings:
-    repo: 94.191.122.96/dev/react_vite_ts
-    registry: 94.191.122.96
-    username:
-      from_secret: harbor_name
-    password:
-      from_secret: harbor_password
-    tags:
-      - dev
-  when:
-    event: push
