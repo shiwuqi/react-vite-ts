@@ -3,46 +3,7 @@ name: default
 
 steps:
 - name: build
-  image: http://94.191.122.96/dev/react_vite_ts:dev
+  image: 94.191.122.96/dev/react_vite_ts:dev
   commands:
-  - npm i pnpm -g
-  - pnpm i
-  - pnpm run build
-
-- name: push-harbor
-  image: plugins/docker
-  settings:
-    repo: http://94.191.122.96/dev/react_vite_ts
-    registry: 94.191.122.96
-    username:
-      from_secret: harbor_name
-    password:
-      from_secret: harbor_password
-    tags:
-      - dev
-  when:
-    event: push
-
-- name: ssh dev
-  image: appleboy/drone-ssh
-  settings:
-    host: 94.191.122.96
-    username: tx_name
-    password:
-      from_secret: tx_password
-    port: 22
-    script:
-      - docker-compose -f /opt/docker-compose.yml pull react_vite_ts
-      - docker-compose -f /opt/docker-compose.yml up -d react_vite_ts
-  when:
-    event: push
-    branch:
-      - dev/*
-      - dev
-trigger:
-  branch:
-    - dev/*
-    - dev
-  event:
-    - pull_request
-    - push
+  - npm i
+  - npm run build
