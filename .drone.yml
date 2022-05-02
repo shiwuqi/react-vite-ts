@@ -9,3 +9,17 @@ steps:
   - npm i pnpm -g
   - pnpm i
   - pnpm run build
+
+- name: push-harbor
+  image: plugins/docker
+  settings:
+    repo: 94.191.122.96/dev/react_vite_ts
+    registry: 94.191.122.96
+    username:
+      from_secret: harbor_name
+    password:
+      from_secret: harbor_password
+    tags:
+      - dev
+  when:
+    event: push
