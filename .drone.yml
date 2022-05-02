@@ -3,7 +3,6 @@ name: default
 
 steps:
 - name: build
-  image: plugins/react_vite_ts:dev
   commands:
   - npm i
   - npm run build
