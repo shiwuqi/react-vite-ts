@@ -20,7 +20,5 @@ steps:
       from_secret: harbor_password
     tags:
       - dev
-  when:
-    event: push
 
-    
+
