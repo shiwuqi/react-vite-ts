@@ -11,8 +11,8 @@ steps:
     - name: push-harbor
       image: plugins/docker
       settings:
-          repo: http://192.168.1.193:5011/dev/react_vite_ts
-          registry: http://192.168.1.193:5011
+          repo: 192.168.1.193:5011/dev/react_vite_ts
+          registry: 192.168.1.193:5011
           username:
               from_secret: harbor_name
           password:
